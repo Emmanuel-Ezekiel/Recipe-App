@@ -1,0 +1,24 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.logo {
+    color: dodgerblue;
+    margin-bottom: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.links a {
+    margin-left: 20px;
+    text-decoration: none;
+}
