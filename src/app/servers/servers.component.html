@@ -20,13 +20,18 @@
 type="text"
 class="form-control"
 (input)="onServerName($event)">
-<p>{{ serverName }}</p>
+<p >{{ serverName }}</p>
 
 <!-- property binding -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">ADD SERVER</button>
 
 <!-- event binding -->
-<p>{{ serverCreation }}</p>
+<p *ngIf="serverCreated"> i love {{ serverCreation }}</p>
+<p *ngIf="serverCreated; else noServer"> i love {{ serverName }}</p>
+<ng-template #noServer>
+    <p> No server was created</p>
+</ng-template>
+
 
 <app-server></app-server>
 
